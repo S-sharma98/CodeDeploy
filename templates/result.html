@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- saved from url=(0135)file:///C:/Users/xyz/Desktop/ds/tweet_sentiment_predictor_web_app-master/tweet_sentiment_predictor_web_app-master/templates/result.html -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+        <title>Tweet's - Sentiment Predictor</title>
+        <link rel="stylesheet" type="text/css" href="file:///C:/Users/xyz/Desktop/ds/tweet_sentiment_predictor_web_app-master/tweet_sentiment_predictor_web_app-master/templates/%7B%7B%20url_for(&#39;static&#39;,%20filename=&#39;styles.css&#39;)%20%7D%7D">
+		<script src="./Tweet&#39;s - Sentiment Predictor_files/5f3f547070.js.download" crossorigin="anonymous"></script><link href="./Tweet&#39;s - Sentiment Predictor_files/free-v4-shims.min.css" media="all" rel="stylesheet"><link href="./Tweet&#39;s - Sentiment Predictor_files/free-v4-font-face.min.css" media="all" rel="stylesheet"><link href="./Tweet&#39;s - Sentiment Predictor_files/free.min.css" media="all" rel="stylesheet">
+		<link href="./Tweet&#39;s - Sentiment Predictor_files/css2" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+    	<div class="container">
+            <h2 class="container-heading"><span class="heading_font">Tweet's</span> Sentiment Predictor</h2>
+            <div class="description">
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using AWS. Made by Shikhar Sharma</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class="safe">Fine! This is a NEUTRAL Tweet.</span></h1>
+				<img class="gif" src="file:///C:/Users/xyz/Desktop/ds/tweet_sentiment_predictor_web_app-master/tweet_sentiment_predictor_web_app-master/templates/%7B%7B%20url_for(&#39;static&#39;,%20filename=&#39;positive-review.webp&#39;)%20%7D%7D" alt="Neutral Tweet">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class="danger">Oops! This is a NEGATIVE Tweet.</span></h1>
+				<img class="gif" src="file:///C:/Users/xyz/Desktop/ds/tweet_sentiment_predictor_web_app-master/tweet_sentiment_predictor_web_app-master/templates/%7B%7B%20url_for(&#39;static&#39;,%20filename=&#39;negative-review.webp&#39;)%20%7D%7D" alt="Negative Tweet">
+			{% elif prediction==2 %}
+				<h1>Prediction: <span class="safe">Great! This is a POSITIVE Tweet.</span></h1>
+				<img class="gif" src="file:///C:/Users/xyz/Desktop/ds/tweet_sentiment_predictor_web_app-master/tweet_sentiment_predictor_web_app-master/templates/%7B%7B%20url_for(&#39;static&#39;,%20filename=&#39;positive-review.webp&#39;)%20%7D%7D" alt="Positive tweet">
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+		<div class="footer">
+            
+            <p class="footer-description">Made by Shikhar Sharma.</p>
+        </div>
+
+	
+
+</body></html>
