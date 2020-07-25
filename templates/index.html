@@ -1,40 +1,42 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///E:/shikhar/git/CodeDeployGitHubDemo-master/index.html -->
-<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
         <title>Tweet's - Sentiment Predictor</title>
-        <link rel="stylesheet" type="text/css" href="file:///C:/Users/xyz/Desktop/ds/tweet_sentiment_predictor_web_app-master/tweet_sentiment_predictor_web_app-master/templates/%7B%7B%20url_for(&#39;static&#39;,%20filename=&#39;styles.css&#39;)%20%7D%7D">
-        <script src="file:///E:/shikhar/git/CodeDeployGitHubDemo-master/Tweet&#39;s%20-%20Sentiment%20Predictor_files/5f3f547070.js.download" crossorigin="anonymous"></script><link href="file:///E:/shikhar/git/CodeDeployGitHubDemo-master/Tweet&#39;s%20-%20Sentiment%20Predictor_files/free-v4-shims.min.css" media="all" rel="stylesheet"><link href="file:///E:/shikhar/git/CodeDeployGitHubDemo-master/Tweet&#39;s%20-%20Sentiment%20Predictor_files/free-v4-font-face.min.css" media="all" rel="stylesheet"><link href="file:///E:/shikhar/git/CodeDeployGitHubDemo-master/Tweet&#39;s%20-%20Sentiment%20Predictor_files/free.min.css" media="all" rel="stylesheet">
-        <link href="file:///E:/shikhar/git/CodeDeployGitHubDemo-master/Tweet&#39;s%20-%20Sentiment%20Predictor_files/css2" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body style="background-color:grey;">
 
         <!-- Website Title -->
     	<div class="container">
-            <h2 class="container-heading"><span class="heading_font">Tweet's</span> Sentiment Predictor</h2>
-            <div class="description">
+            <h2 class='container-heading'><span class="heading_font">Tweet's</span> Sentiment Predictor</h2>
+            <div class='description'>
+                    <marquee class="marq" bgcolor = "Green" direction = "left" loop="" > 
     			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku. Made by Shikhar Sharma.</p>
+                            </marque>      
     		</div>
     	</div>
 
         <!-- Text Area -->
     	<div class="ml-container">
     		<form action="{{ url_for('predict') }}" method="POST">
-        		<textarea class="message-box" name="message" rows="15" cols="75" placeholder="Enter Your Tweet Here..."></textarea><br>
+        		<textarea class='message-box' name="message" rows="15" cols="75" placeholder="Enter Your Tweet Here..."></textarea><br/>
         		<input type="submit" class="my-cta-button" value="Predict">
         	</form>
     	</div>
 
         <!-- Footer -->
-        <div class="footer">
+        <div class='footer'>
             <div class="contact">
-                <a target="_blank" href="https://github.com/S-sharma98/CodeDeployGitHubDemo"><i class="fab fa-github fa-lg contact-icon" aria-hidden="true"></i></a>
-                
+                <a target="_blank" href="https://github.com/S-sharma98/CodeDeploy"><i class="fab fa-github fa-lg contact-icon"></i></a>
+        
             </div>
-            <p class="footer-description">Made by Shikhar Sharma.</p>
+            <p class='footer-description'>Made by Shikhar Sharma.</p>
         </div>
 
-    
-
-  </body></html>
+    </body>
+</html>
