@@ -20,7 +20,7 @@
 
         <!-- Text Area -->
     	<div class="ml-container">
-    		<form action="file:///C:/Users/xyz/Desktop/ds/tweet_sentiment_predictor_web_app-master/tweet_sentiment_predictor_web_app-master/templates/%7B%7B%20url_for(&#39;predict&#39;)%20%7D%7D" method="POST">
+    		<form action="{{ url_for('predict') }}" method="POST">
         		<textarea class="message-box" name="message" rows="15" cols="75" placeholder="Enter Your Tweet Here..."></textarea><br>
         		<input type="submit" class="my-cta-button" value="Predict">
         	</form>
